@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catch the Falling Items</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Catch the Falling Items!</h1>
+  <p>Move the basket with the left/right arrow keys to catch items.</p>
+  <div id="game-container">
+    <canvas id="gameCanvas"></canvas>
+  </div>
+  <button id="startBtn">Start Game</button>
+  
+  <!-- Game Over Modal -->
+  <div id="gameOverModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal()">X</button>
+      <h2>Game Over</h2>
+      <p id="finalScoreText">Your Score: 0</p>
+      <p id="highScoreText">High Score: 0</p>
+      <button id="restartBtn">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function closeModal() {
+      document.querySelector('.modal').style.display = 'none';
+      location.reload(); // Refresh the page after closing the modal
+    }
+  </script>
+</body>
+</html>
+
